@@ -25,11 +25,5 @@ export default (options = { maxDepth: 4 }) => ({
     }
 
     return 'not-handled';
-  },
-  onTab: (event, { setEditorState, getEditorState }) => {
-    const { maxDepth } = options;
-    const editorState = getEditorState();
-
-    setEditorState(RichUtils.onTab(event, editorState, maxDepth));
   }
 });
